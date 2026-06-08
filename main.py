@@ -5,18 +5,14 @@ from SOL import (
     ExecuteAQuery,
     DeleteDataset,
     CreateDataset,
+    SolModule,
 )
 
 
 if __name__ == "__main__":
-    module = Module()
-
-
+    module = SolModule()
     module.register(CreateDataset, "create-dataset")
     module.register(ListQueries, "list-queries")
     module.register(ExecuteAQuery, "execute-a-query")
     module.register(DeleteDataset, "delete-dataset")
-
-
-
     module.run()
