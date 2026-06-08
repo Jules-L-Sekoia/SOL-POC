@@ -39,7 +39,7 @@ class DeleteDataset(BaseSolAction):
 
     def configure_urls(self) -> None:
         """Set up the dataset API base path."""
-        self.dataset_api_path = urljoin(self.module.configuration["base_url"], "api/v1/notebooks/datasets")
+        self.dataset_api_path = urljoin(self.module.configuration.base_url, "api/v1/notebooks/datasets")
 
     @retry(
         reraise=True,

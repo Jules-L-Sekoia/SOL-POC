@@ -8,7 +8,6 @@ from SOL import (
     SolModule,
 )
 
-
 if __name__ == "__main__":
     module = SolModule()
     module.register(CreateDataset, "create-dataset")

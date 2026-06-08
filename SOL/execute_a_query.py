@@ -63,8 +63,8 @@ class ExecuteAQuery(BaseSolAction):
 
     def configure_urls(self) -> None:
         """Set up API base paths and configure the HTTP session with retry and auth headers."""
-        self.query_api_path = urljoin(self.module.configuration["base_url"], "api/v1/notebooks/queries")
-        self.query_runs_api_path = urljoin(self.module.configuration["base_url"], "api/v1/notebooks/queries/runs")
+        self.query_api_path = urljoin(self.module.configuration.base_url, "api/v1/notebooks/queries")
+        self.query_runs_api_path = urljoin(self.module.configuration.base_url, "api/v1/notebooks/queries/runs")
 
     @retry(
         reraise=True,

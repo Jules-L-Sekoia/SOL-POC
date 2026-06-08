@@ -36,8 +36,7 @@
         "title": "parameters",
         "type": "string",
         "description": "Filter queries by the parameters they use"
-      } 
-
+      }
     }
   },
   "results": {
@@ -158,7 +157,7 @@
       }
     },
     "required": [
-        "queries"
-      ]
+      "queries"
+    ]
   }
 }

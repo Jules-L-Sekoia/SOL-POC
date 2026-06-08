@@ -17,11 +17,19 @@
         "type": "string",
         "format": "uuid",
         "description": "Identifier of the dataset to delete."
-  }
+      }
     },
     "oneOf": [
-      {"required": ["name"]},
-      {"required": ["uuid"]}
+      {
+        "required": [
+          "name"
+        ]
+      },
+      {
+        "required": [
+          "uuid"
+        ]
+      }
     ]
   },
   "results": {}
