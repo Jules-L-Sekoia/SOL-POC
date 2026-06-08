@@ -5,7 +5,6 @@ from requests.structures import CaseInsensitiveDict
 from urllib3.util.retry import Retry
 
 from sekoia_automation.action import Action
-from sekoiaio.utils import user_agent
 
 
 class BaseSolAction(Action):
@@ -33,6 +32,6 @@ class BaseSolAction(Action):
             data={
                 "Accept": "application/json",
                 "Authorization": f"Bearer {self.module.configuration['api_key']}",
-                "User-Agent": user_agent(),
+                "User-Agent": "Sekoia.io Automation Module - SOL actions - ",
             }
         )
