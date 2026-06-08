@@ -31,7 +31,7 @@ class BaseSolAction(Action):
         self.http_session.headers = CaseInsensitiveDict(
             data={
                 "Accept": "application/json",
-                "Authorization": f"Bearer {self.module.configuration['api_key']}",
-                "User-Agent": "Sekoia.io Automation Module - SOL actions - ",
+                "Authorization": f"Bearer {self.module.configuration.api_key}",
+                "User-Agent": f"symphony-module-sekoia.io/0.2.1",
             }
         )

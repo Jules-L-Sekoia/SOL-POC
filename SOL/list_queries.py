@@ -52,7 +52,7 @@ class ListQueries(BaseSolAction):
 
     def configure_urls(self) -> None:
         """Set up the query API base path."""
-        self.query_api_path = urljoin(self.module.configuration["base_url"], "api/v1/notebooks/queries")
+        self.query_api_path = urljoin(self.module.configuration.base_url, "api/v1/notebooks/queries")
 
     @retry(
         reraise=True,
@@ -73,7 +73,6 @@ class ListQueries(BaseSolAction):
         while total is None or total > offset:
             response_list_query = self.http_session.get(
                 url=self.query_api_path,
-                headers={"Authorization": "Bearer " + self.module.configuration["api_key"]},
                 params={
                     "limit": limit,
                     "offset": offset,
