@@ -1,21 +1,23 @@
 {
   "configuration": {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SolModuleConfiguration",
+    "type": "object",
     "properties": {
-      "api_key": {
-        "title": "API Key",
-        "type": "string",
-        "description": "API key for authenticating with the Sekoia.io API."
-      },
       "base_url": {
-        "title": "Base URL",
-        "type": "string",
-        "description": "Base URL of the Sekoia.io API. If not provided, the default value 'https://app.fra2.sekoia.io/' will be used.",
-        "default": "https://app.fra2.sekoia.io/"
+        "title": "Base Url",
+        "description": "Base URL of the Sekoia instance",
+        "type": "string"
+      },
+      "api_key": {
+        "title": "Api Key",
+        "description": "API Key",
+        "type": "string"
       }
     },
-    "title": "Sekoia.io Configuration",
-    "type": "object",
+    "required": [
+      "base_url",
+      "api_key"
+    ],
     "secrets": [
       "api_key"
     ]
@@ -24,7 +26,7 @@
   "name": "SOL actions",
   "uuid": "53253946-0d99-468b-b6ed-a00904b385ad",
   "slug": "sekoia.io",
-  "version": "2.72.9",
+  "version": "2.72.10",
   "categories": [
     "Generic"
   ]
