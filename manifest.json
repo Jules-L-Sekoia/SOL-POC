@@ -10,8 +10,8 @@
       "base_url": {
         "title": "Base URL",
         "type": "string",
-        "description": "Base URL of the Sekoia.io API. If not provided, the default value 'https://app.fra2.sekoia.io' will be used.",
-        "default": "https://app.fra2.sekoia.io"
+        "description": "Base URL of the Sekoia.io API. If not provided, the default value 'https://app.fra2.sekoia.io/' will be used.",
+        "default": "https://app.fra2.sekoia.io/"
       }
     },
     "title": "Sekoia.io Configuration",
@@ -24,7 +24,7 @@
   "name": "SOL actions",
   "uuid": "53253946-0d99-468b-b6ed-a00904b385ad",
   "slug": "sekoia.io",
-  "version": "2.72.3",
+  "version": "2.72.4",
   "categories": [
     "Generic"
   ]

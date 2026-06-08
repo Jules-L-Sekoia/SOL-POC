@@ -73,6 +73,7 @@ class ListQueries(BaseSolAction):
         while total is None or total > offset:
             response_list_query = self.http_session.get(
                 url=self.query_api_path,
+                headers={"Authorization": "Bearer " + self.module.configuration["api_key"]},
                 params={
                     "limit": limit,
                     "offset": offset,
